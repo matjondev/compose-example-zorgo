@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">ComposeExamples</string>
+    <string name="start">Начало</string>
+    <string name="authorization">Авторизация</string>
+    <string name="next">Далее</string>
+    <string name="phone_number">Номер телефона</string>
+    <string name="enter_code">Код подтверждения</string>
+    <string name="name">Имя</string>
+    <string name="user_agreement">Продолжая вы соглашаетесь с правилами использования приложения</string>
+    <string name="save">Сохранить</string>
+    <string name="menu_main">Главная</string>
+    <string name="menu_marketing">Маркет</string>
+    <string name="menu_basket">Корзина</string>
+    <string name="menu_my_car">Мой авто</string>
+    <string name="menu_profile">Кабинет</string>
+    <string name="project_name">ZORGO</string>
+    <string name="car_incurance">Автострахование</string>
+    <string name="car_incurance_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
+    <string name="tranvel">Путешествие</string>
+    <string name="pdd_pains">Штрафы ПДД</string>
+    <string name="market_place">Маркетплейс</string>
+    <string name="osago">ОСАГО</string>
+    <string name="kasko">КАСКО</string>
+    <string name="help_dialog_content">Обязательное страхование гражданской ответственности владельцев транспортных средств (ОСГОВТС), также известное как Обязательное страхование автогражданской ответственности (ОСАГО) — один из самых распространенных видов страхования. Ее условия распространяются на юридических и физических лиц, владеющих различными автотранспортными средствами. Ознакомьтесь с нашим предложением и с ответами на часто задаваемые вопросы по страхованию ОСАГО в Узбекистане.</string>
+    <string name="more">Подробнее</string>
+    <string name="close">Закрыть</string>
+</resources>
