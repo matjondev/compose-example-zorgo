@@ -57,7 +57,7 @@ fun NavGraphBuilder.authGraph(
         }
         composable(Screen.Auth.AuthEnterPhone.screenName) {
             systemUiController.setSystemDarkIcons(true)
-            AuthEnterPhoneScreen(navController)
+            AuthEnterPhoneScreen(navController, hiltViewModel())
         }
         composable(Screen.Auth.AuthEnterCode.screenName) {
             AuthEnterCodeScreen(

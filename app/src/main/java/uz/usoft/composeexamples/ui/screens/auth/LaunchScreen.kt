@@ -18,6 +18,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
+import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
@@ -27,6 +28,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.asStateFlow
 import uz.usoft.composeexamples.ui.navigation.Screen
 import uz.usoft.composeexamples.ui.theme.Blue700
 import uz.usoft.composeexamples.ui.theme.GradientMain
@@ -37,7 +40,6 @@ import uz.usoft.composeexamples.ui.theme.ZorGoTypography
 
 @Composable
 fun LaunchScreen(navController: NavController) {
-
     BoxWithConstraints(
         modifier = Modifier
             .fillMaxSize()

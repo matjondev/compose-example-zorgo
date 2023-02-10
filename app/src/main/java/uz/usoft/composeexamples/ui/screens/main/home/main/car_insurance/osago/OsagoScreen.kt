@@ -3,6 +3,7 @@ package uz.usoft.composeexamples.ui.screens.main.home.main.car_insurance.osago
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material.DropdownMenu
+import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.res.stringResource
@@ -25,6 +26,9 @@ fun OsagoScreen(navController: NavController) {
                 onBackClicked = { navController.popBackStack() },
                 onHelpClicked = { dialogVisible = true }
             )
+            Surface() {
+                
+            }
 
             LinkButton(text = "dropDown", buttonSizeType = ButtonSizeType.Medium) {
                 dropDownExpanded = true

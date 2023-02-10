@@ -10,6 +10,6 @@ import javax.inject.Inject
 
 @HiltViewModel
 class MainActivityViewModel @Inject constructor(): ViewModel() {
-    var isRegistered by mutableStateOf(true)
+    var isRegistered by mutableStateOf(false)
         private set
 }
