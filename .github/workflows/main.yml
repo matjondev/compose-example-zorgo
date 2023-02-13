@@ -27,11 +27,21 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew build
 
-    - name: Generate app APK.
-      run: ./gradlew assembleDebug --stacktrace
+#    - name: Generate app APK.
+#      run: ./gradlew assembleDebug --stacktrace
+#
+#    - name: Upload APK to Github Artifacts
+#      uses: actions/upload-artifact@v2
+#      with:
+#        name: merch_app.apk
+#        path: app/build/outputs/apk/debug/app-debug.apk
 
-    - name: Upload APK to Github Artifacts
-      uses: actions/upload-artifact@v2
-      with:
-        name: merch_app.apk
-        path: app/build/outputs/apk/debug/app-debug.apk
+    - name: Generate app bundle
+      run: ./gradlew app:bundleRelease --stacktrace
+
+    - name: Sign app bundle
+      run: |
+        jarsigner -keystore ../keystore/Untitled \
+        -storepass 'key_ci_cd'  -keypass 'key_ci_cd'  \
+        app/build/outputs/bundle/release/app-release.aab 'key02'
+          
