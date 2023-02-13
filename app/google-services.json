@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "143115150534",
+    "project_id": "composeexamples-eed78",
+    "storage_bucket": "composeexamples-eed78.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:143115150534:android:2cfe5e0235933101e1a3c7",
+        "android_client_info": {
+          "package_name": "uz.usoft.composeexamples"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "143115150534-1irl24avb4cvo0faps90rdv50t09ckum.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANo4PqtMY7Nm_id7g_V-qTjUmU2XBwIx8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "143115150534-1irl24avb4cvo0faps90rdv50t09ckum.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
