@@ -41,7 +41,7 @@ jobs:
 
     - name: Sign app bundle
       run: |
-        jarsigner -keystore /keystore/Untitled \
+        jarsigner -keystore keystore/Untitled \
         -storepass 'key_ci_cd'  -keypass 'key_ci_cd'  \
         app/build/outputs/bundle/release/app-release.aab 'key02'
           
