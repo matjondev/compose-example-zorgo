@@ -51,8 +51,8 @@ jobs:
     - name: Sign app bundle
       run: |
         jarsigner -keystore kestore/Untitled \
-        -storepass 'key_ci_cd'  -keypass 'key_ci_cd'  \
-        app/build/outputs/bundle/release/app-release.aab 'key02'
+        -storepass ${{ secrets.KEY_STORE_PASSWORD }}  -keypass ${{ secrets.KEY_PASSWORD }}  \
+        app/build/outputs/bundle/release/app-release.aab ${{ secrets.ALIAS }}
 
   upload:
     needs: [ build ]
