@@ -5,18 +5,22 @@ jobs:
   setup-jdk:
     runs-on: ubuntu-latest
 
-    steps:
-      - uses: actions/checkout@v3
-      - name: set up JDK 11
-        uses: actions/setup-java@v3
-        with:
-          java-version: '11'
-          distribution: 'temurin'
-          cache: gradle
   linux-commands:
+  
+    name: Save output
     runs-on: ubuntu-latest
-
+    
     steps:
-      - name: Run build script
-        run: ./.github/scripts/build.sh
-        shell: bash
+      - shell: bash
+        run: |
+          expl 1+1 > out.log
+      - name: Upload file
+        uses: actions/upload-artifact@v3
+        with:
+          name: output-log-file
+          path: output.log
+      
+      - name: Download a single artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: output-log-file
