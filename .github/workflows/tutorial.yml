@@ -7,7 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - run: expl 1+1 > out.log
+      - shell: bash
+        run: |
+          expr 1 + 1 > output.log
       - name: Upload file
         uses: actions/upload-artifact@v3
         with:
