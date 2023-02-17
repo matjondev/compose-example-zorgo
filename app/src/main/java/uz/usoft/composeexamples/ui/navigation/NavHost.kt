@@ -52,7 +52,7 @@ fun NavGraphBuilder.authGraph(
 ) {
     navigation(startDestination = Screen.Auth.Launch.screenName, Screen.Auth.screenName) {
         composable(Screen.Auth.Launch.screenName) {
-            systemUiController.setSystemDarkIcons(false)
+            systemUiController.setSystemDarkIcons(true)
             LaunchScreen(navController)
         }
         composable(Screen.Auth.AuthEnterPhone.screenName) {

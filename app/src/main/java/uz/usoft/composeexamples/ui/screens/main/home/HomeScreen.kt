@@ -1,5 +1,6 @@
 package uz.usoft.composeexamples.ui.screens.main.home
 
+import android.content.Context
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.BottomAppBar
@@ -10,6 +11,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.NavController
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.compose.NavHost
@@ -24,6 +26,8 @@ import uz.usoft.composeexamples.ui.theme.Blue800
 
 @Composable
 fun HomeScreen(navController: NavController) {
+
+    val d: Context =LocalContext.current
 
     val bottomNavController = rememberNavController()
 

@@ -36,35 +36,40 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew build
 
-#    - name: Generate app APK.
-#      run: ./gradlew assembleDebug --stacktrace
-#
-#    - name: Upload APK to Github Artifacts
-#      uses: actions/upload-artifact@v2
-#      with:
-#        name: merch_app.apk
-#        path: app/build/outputs/apk/debug/app-debug.apk
+    - name: Generate app APK.
+      run: ./gradlew assembleDebug --stacktrace
 
-    - name: Generate app bundle
-      run: ./gradlew app:bundleRelease --stacktrace
-
-    - name: Sign app bundle
-      run: |
-        jarsigner -keystore kestore/Untitled \
-        -storepass ${{ secrets.KEY_STORE_PASSWORD }}  -keypass ${{ secrets.KEY_PASSWORD }}  \
-        app/build/outputs/bundle/release/app-release.aab ${{ secrets.ALIAS }}
-
-    - name: build release
-      run: ./gradlew assembleRelease
-
-    - name: Firebase App Distribution
-      uses: wzieba/Firebase-Distribution-Github-Action@v1.5.0
+    - name: Upload APK to Github Artifacts
+      uses: actions/upload-artifact@v2
       with:
-        appId: ${{secrets.FIREBASE_APP_ID}}
-#        token: ${{secrets.FIREBASE_TOKEN}}
-        serviceCredentialsFileContent: ${{ secrets.CREDENTIAL_FILE_CONTENT }}
-        groups: testers
-        file: app/build/outputs/apk/release/app-release-unsigned.apk
+        name: compose.apk
+        path: app/build/outputs/apk/debug/app-debug.apk
+
+    - name: Download a apk
+      uses: actions/download-artifact@v3
+      with:
+        name: compose.apk
+
+#    - name: Generate app bundle
+#      run: ./gradlew app:bundleRelease --stacktrace
+#
+#    - name: Sign app bundle
+#      run: |
+#        jarsigner -keystore kestore/Untitled \
+#        -storepass ${{ secrets.KEY_STORE_PASSWORD }}  -keypass ${{ secrets.KEY_PASSWORD }}  \
+#        app/build/outputs/bundle/release/app-release.aab ${{ secrets.ALIAS }}
+#
+#    - name: build release
+#      run: ./gradlew assembleRelease
+#
+#    - name: Firebase App Distribution
+#      uses: wzieba/Firebase-Distribution-Github-Action@v1.5.0
+#      with:
+#        appId: ${{secrets.FIREBASE_APP_ID}}
+##        token: ${{secrets.FIREBASE_TOKEN}}
+#        serviceCredentialsFileContent: ${{ secrets.CREDENTIAL_FILE_CONTENT }}
+#        groups: testers
+#        file: app/build/outputs/apk/release/app-release-unsigned.apk
 
 #  upload:
 #    needs: [ build ]
