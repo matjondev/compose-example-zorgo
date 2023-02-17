@@ -2,9 +2,6 @@ name: learn-github-actions
 run-name: ${{ github.actor }} is learning GitHub Actions
 on: [push]
 jobs:
-  setup-jdk:
-    runs-on: ubuntu-latest
-
   linux-commands:
   
     runs-on: ubuntu-latest
