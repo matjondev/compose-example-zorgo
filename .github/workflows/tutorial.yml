@@ -7,7 +7,6 @@ jobs:
 
   linux-commands:
   
-    name: Save output
     runs-on: ubuntu-latest
     
     steps:
